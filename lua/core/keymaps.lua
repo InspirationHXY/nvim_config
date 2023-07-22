@@ -3,9 +3,9 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- ---------- map --------------
-keymap.set("i", "jk", "<ESC>")
+keymap.set("i", "kk", "<ESC>")
 keymap.set("i", "jj", "<ESC>")
-keymap.set("i", "kl", "<ESC>")
+keymap.set("i", "jk", "<ESC>")
 keymap.set("i", "kj", "<ESC>")
 
 ---- <CR>
@@ -14,6 +14,11 @@ keymap.set("n", "<leader>[", "<ESC>A<CR>")
 
 keymap.set("i", "<leader>]", "<ESC>A;<CR>")
 keymap.set("n", "<leader>]", "<ESC>A;<CR>")
+
+keymap.set("n", "<C-l>", "<C-w>l")
+keymap.set("n", "<C-i>", "<C-w>i")
+keymap.set("n", "<C-k>", "<C-w>k")
+keymap.set("n", "<C-h>", "<C-w>h")
 
 
 -- ---------- 插入模式 ---------- ---
