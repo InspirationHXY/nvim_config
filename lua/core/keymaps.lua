@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+
 -- ---------- map --------------
 keymap.set("i", "kk", "<ESC>")
 keymap.set("i", "jj", "<ESC>")
@@ -19,10 +20,16 @@ keymap.set("n", "<C-l>", "<C-w>l")
 keymap.set("n", "<C-i>", "<C-w>i")
 keymap.set("n", "<C-k>", "<C-w>k")
 keymap.set("n", "<C-h>", "<C-w>h")
+keymap.set("n", "<leader>w", ":wa<CR>")
+keymap.set("n", "<leader>u", "<PageUp>")
+keymap.set("n", "<leader>d", "<PageDown>")
 
 
 -- ---------- 插入模式 ---------- ---
 keymap.set("i", "jk", "<ESC>")
+keymap.set("i", "<leader>w", "<ESC>:wa<CR>")
+
+
 
 -- ---------- 视觉模式 ---------- ---
 -- 单行或多行移动

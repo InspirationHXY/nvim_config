@@ -19,31 +19,8 @@ vim.opt.rtp:prepend(lazypath)
 -- Example using a list of specs with the default options
 -- vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
-require("lazy").setup({
-  -- theme
-  { 
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
-  -- barbecue
-  {
-    "utilyre/barbecue.nvim",
-    name = "barbecue",
-    version = "*",
-    dependencies = {
-      "SmiteshP/nvim-navic",
-      "nvim-tree/nvim-web-devicons", -- optional dependency
-    },
-    opts = {
-      -- configurations go here
-    },
-  }
-
-})
-
-vim.cmd[[colorscheme tokyonight]]
+-- add plugins
+require("lazy").setup("plugins")
 
 -- Lua
 require('barbecue').setup {
@@ -51,7 +28,6 @@ require('barbecue').setup {
   theme = 'tokyonight',
   -- ... your barbecue config
 }
-
 -- Lua
 require('lualine').setup {
   options = {
@@ -60,3 +36,15 @@ require('lualine').setup {
     -- ... your lualine config
   }
 }
+
+-- theme
+vim.cmd[[colorscheme tokyonight]]
+
+-- mason
+require("mason").setup()
+require("mason-lspconfig").setup()
+
+require("lspconfig").lua_ls.setup {}
+
+-- Setup language servers.
+local lspconfig = require('lspconfig')
