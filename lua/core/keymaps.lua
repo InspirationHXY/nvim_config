@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
+ 
 
 
 -- ---------- map --------------
@@ -16,13 +17,16 @@ keymap.set("n", "<leader>[", "<ESC>A<CR>")
 keymap.set("i", "<leader>]", "<ESC>A;<CR>")
 keymap.set("n", "<leader>]", "<ESC>A;<CR>")
 
-keymap.set("n", "<C-l>", "<C-w>l")
-keymap.set("n", "<C-i>", "<C-w>i")
-keymap.set("n", "<C-k>", "<C-w>k")
-keymap.set("n", "<C-h>", "<C-w>h")
+--------------------------
+--keymap.set("n", "<C-l>", "<C-w>l")
+--keymap.set("n", "<C-i>", "<C-w>i")
+--keymap.set("n", "<C-k>", "<C-w>k")
+--keymap.set("n", "<C-h>", "<C-w>h")
+-------------------------
 keymap.set("n", "<leader>w", ":wa<CR>")
 keymap.set("n", "<leader>u", "<PageUp>")
 keymap.set("n", "<leader>d", "<PageDown>")
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 
 -- ---------- 插入模式 ---------- ---
