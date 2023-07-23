@@ -29,18 +29,34 @@ require("lazy").setup({
   },
   -- barbecue
   {
-  "utilyre/barbecue.nvim",
-  name = "barbecue",
-  version = "*",
-  dependencies = {
-    "SmiteshP/nvim-navic",
-    "nvim-tree/nvim-web-devicons", -- optional dependency
-  },
-  opts = {
-    -- configurations go here
-  },
-}
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    opts = {
+      -- configurations go here
+    },
+  }
 
 })
 
 vim.cmd[[colorscheme tokyonight]]
+
+-- Lua
+require('barbecue').setup {
+  -- ... your barbecue config
+  theme = 'tokyonight',
+  -- ... your barbecue config
+}
+
+-- Lua
+require('lualine').setup {
+  options = {
+    -- ... your lualine config
+    theme = 'tokyonight'
+    -- ... your lualine config
+  }
+}
